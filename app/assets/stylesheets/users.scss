@@ -5,6 +5,7 @@
 // レイアウト
 
 .all_container{
+ position: relative;
  width: 800px;
  margin: 0 auto;
  text-align: center;
@@ -38,3 +39,12 @@ li{
   }
 }
 
+
+.search-icon {
+ position: absolute;
+ right: 200px;
+ bottom: 4px;
+ background-color: red;
+ border-radius: 50%;
+ padding: 10px;
+}
