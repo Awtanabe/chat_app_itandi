@@ -8,4 +8,16 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .header
+      .brand
+        ヘッダー
+      .links
+        - if user_signed_in?
+          ログイン中
+          = link_to "ログアウトする", destroy_user_session_path, method: :delete
+        - else
+          会員登録しよう
+          = link_to "ログインする", user_session_path
+          = link_to "会員登録する", new_user_registration_path
+
     = yield
