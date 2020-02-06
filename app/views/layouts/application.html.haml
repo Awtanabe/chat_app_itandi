@@ -8,6 +8,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+  .all_container
     .header
       .brand
         ヘッダー
@@ -19,5 +20,14 @@
           会員登録しよう
           = link_to "ログインする", user_session_path
           = link_to "会員登録する", new_user_registration_path
-
     = yield
+    .footer
+      フッター
+      %ul
+        %li
+          ツイート
+        %li
+          検索
+        %li
+          メッセージ
+        %li
